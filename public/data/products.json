@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "name": "Impresión 3D desde Cero",
+    "price": 34999,
+    "description": "Aprendé a imprimir modelos con tu Ender 3 V2: calibración, materiales, perfiles y posprocesado.",
+    "imageUrl": "/images/curso-impresion3d.jpg",
+    "category": "impresion3d",
+    "level": "Inicial a Intermedio",
+    "duration": "8 semanas",
+    "format": "Clases grabadas + soporte",
+    "language": "Español"
+  },
+  {
+    "id": "2",
+    "name": "Edición de Video para Redes",
+    "price": 29999,
+    "description": "Workflow completo con CapCut y Premiere: cortes, subtítulos, transiciones y optimización para Reels/TikTok.",
+    "imageUrl": "/images/curso-edicion-video.jpg",
+    "category": "video",
+    "level": "Inicial",
+    "duration": "6 semanas",
+    "format": "Proyectos guiados + plantillas",
+    "language": "Español"
+  },
+  {
+    "id": "3",
+    "name": "Edición Avanzada en Premiere Pro",
+    "price": 39999,
+    "description": "Técnicas profesionales de edición, color, sonido y efectos en Adobe Premiere Pro.",
+    "imageUrl": "/images/curso-premiere-pro.jpg",
+    "category": "video",
+    "level": "Intermedio",
+    "duration": "8 semanas",
+    "format": "Clases grabadas + ejercicios prácticos",
+    "language": "Español"
+  },
+  {
+    "id": "4",
+    "name": "Motion Graphics con After Effects",
+    "price": 42999,
+    "description": "Animaciones de texto, transiciones avanzadas y VFX para redes y publicidad.",
+    "imageUrl": "/images/curso-after-effects.jpg",
+    "category": "video",
+    "level": "Intermedio",
+    "duration": "7 semanas",
+    "format": "Proyectos guiados + recursos descargables",
+    "language": "Español"
+  },
+  {
+    "id": "5",
+    "name": "Color y Corrección en DaVinci Resolve",
+    "price": 37999,
+    "description": "Color grading, nodes, LUTs y flujo profesional en DaVinci Resolve.",
+    "imageUrl": "/images/curso-davinci-resolve.jpg",
+    "category": "video",
+    "level": "Inicial a Intermedio",
+    "duration": "6 semanas",
+    "format": "Clases + prácticas guiadas",
+    "language": "Español"
+  },
+  {
+    "id": "6",
+    "name": "JavaScript desde Cero",
+    "price": 39999,
+    "description": "Fundamentos de JS moderno: DOM, eventos, fetch, módulos y buenas prácticas.",
+    "imageUrl": "/images/curso-javascript.jpg",
+    "category": "programacion",
+    "level": "Inicial a Intermedio",
+    "duration": "10 semanas",
+    "format": "Clases en vivo + prácticas",
+    "language": "Español"
+  },
+  {
+    "id": "7",
+    "name": "Programación desde Cero",
+    "price": 35999,
+    "description": "Pensamiento computacional, pseudocódigo y primeros pasos con JavaScript.",
+    "imageUrl": "/images/curso-programacion-basica.jpg",
+    "category": "programacion",
+    "level": "Inicial",
+    "duration": "10 semanas",
+    "format": "Clases en vivo + prácticas",
+    "language": "Español"
+  },
+  {
+    "id": "8",
+    "name": "Desarrollo Web Frontend",
+    "price": 45999,
+    "description": "HTML, CSS y JavaScript moderno para crear sitios responsive y profesionales.",
+    "imageUrl": "/images/curso-frontend.jpg",
+    "category": "programacion",
+    "level": "Inicial a Intermedio",
+    "duration": "12 semanas",
+    "format": "Proyectos guiados + mentorías",
+    "language": "Español"
+  },
+  {
+    "id": "9",
+    "name": "Lógica de Programación y Algoritmos",
+    "price": 34999,
+    "description": "Variables, estructuras de control, recursividad y resolución de problemas.",
+    "imageUrl": "/images/curso-logica.jpg",
+    "category": "programacion",
+    "level": "Inicial",
+    "duration": "8 semanas",
+    "format": "Ejercicios prácticos + tutorías en vivo",
+    "language": "Español"
+  }
+]

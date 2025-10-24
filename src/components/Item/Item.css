@@ -1,0 +1,43 @@
+
+.product-item{
+  background: linear-gradient(180deg, var(--card), var(--bg-elev));
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 2px);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  overflow: hidden;
+}
+.product-item:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: rgba(212,175,55,.35);
+}
+.product-item img{
+  border-radius: 12px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255,255,255,.05);
+}
+.product-title{
+  color: var(--gold);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.product-item p{
+  margin: 4px 0;
+  color: var(--muted);
+}
+
+/* Simple grid where ItemList lamina con <Link><Item/></Link> */
+.product-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Link wrapper look */
+a > .product-item{
+  height: 100%;
+}
