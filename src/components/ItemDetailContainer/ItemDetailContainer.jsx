@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ItemDetail } from "../ItemDetail/ItemDetail"; // <- OJO: carpeta y archivo con I y D mayúsculas
+import { ItemDetail } from "../ItemDetail/ItemDetail.jsx";
+
 
 export const ItemDetailContainer = () => {
   const [detail, setDetail] = useState(null);
