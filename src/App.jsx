@@ -6,10 +6,10 @@ import { Cart } from "./components/Cart/Cart";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { ProductFormContainer } from "./components/ProductFormContainer/ProductFormContainer";
 import { Login } from "./components/Login/Login";
-import { CartProvider } from "./context/CartContext";
-import { AuthProvider } from "./context/AuthContext";
-
+import { CartProvider } from "./context/CartContext/CartProvider";
+import { AuthProvider } from "./context/AuthContext.jsx";
 import "./App.css";
+
 
 function App() {
   return (

@@ -62,7 +62,7 @@ export const ProductFormContainer = () => {
 
     const validationError = validate();
     if (validationError) {
-      setError(validationError);
+      toast.error(validationError);
       return;
     }
 
@@ -82,14 +82,13 @@ export const ProductFormContainer = () => {
 
       if (!response.ok) throw new Error("Error al guardar el producto");
 
-      setSuccess(
-        editingId ? "Curso actualizado correctamente" : "Curso creado correctamente"
-      );
+      toast.success(editingId ? "Curso actualizado correctamente" : "Curso creado correctamente");
+
       setForm(INITIAL_FORM);
       setEditingId(null);
       fetchProducts();
     } catch (e) {
-      setError(e.message || "Error al guardar el producto");
+      toast.error(e.message || "Error al guardar el producto");
     } finally {
       setLoading(false);
     }
@@ -121,7 +120,7 @@ export const ProductFormContainer = () => {
       setLoading(true);
       const res = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
       if (!res.ok) throw new Error("Error al eliminar el curso");
-      setSuccess("Curso eliminado");
+      toast.success("Curso eliminado");
       fetchProducts();
     } catch (e) {
       setError(e.message || "Error al eliminar el curso");

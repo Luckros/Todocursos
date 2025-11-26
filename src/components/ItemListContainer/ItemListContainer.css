@@ -1,0 +1,66 @@
+.listContainer {
+  padding: 2rem 1rem;
+  color: #ffffff;
+}
+
+.listHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .listHeader {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.listTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f5c542;
+}
+
+.searchBox {
+  max-width: 280px;
+  width: 100%;
+}
+
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.pageBtn {
+  border: 1px solid #f5c54255;
+  background-color: #0b192f;
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-width: 36px;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background-color: #1b263b;
+}
+
+.pageBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.pageBtnActive {
+  background-color: #f5c542;
+  color: #0b192f;
+  border-color: #f5c542;
+  font-weight: 700;
+}
