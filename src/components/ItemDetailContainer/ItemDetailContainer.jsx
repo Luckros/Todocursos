@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail.jsx";
-
+import { API_URL } from "../../config/api";
 
 export const ItemDetailContainer = () => {
   const [detail, setDetail] = useState(null);
@@ -12,21 +12,53 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch("/data/products.json")
+
+    fetch(`${API_URL}/${id}`)
       .then((res) => {
-        if (!res.ok) throw new Error("Hubo un problema al buscar productos");
+        if (!res.ok) {
+          throw new Error("Error al obtener el curso");
+        }
         return res.json();
       })
       .then((data) => {
-        const found = data.find((p) => String(p.id) === String(id));
-        setDetail(found || null);
+        setDetail(data);
       })
-      .catch((e) => setError(e?.message || "Error al cargar producto"))
-      .finally(() => setLoading(false));
+      .catch((err) => {
+        setError(err.message || "Error inesperado");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, [id]);
 
-  if (loading) return <main><h1>Cargando...</h1></main>;
-  if (error) return <main><h1>Error</h1><p>{error}</p></main>;
+  if (loading) {
+    return (
+      <main>
+        <h1>Cargando curso...</h1>
+      </main>
+    );
+  }
 
-  return <main>{detail ? <ItemDetail detail={detail} /> : <p>No encontrado</p>}</main>;
+  if (error) {
+    return (
+      <main>
+        <h1>Error</h1>
+        <p>{error}</p>
+      </main>
+    );
+  }
+
+  if (!detail) {
+    return (
+      <main>
+        <h1>Curso no encontrado</h1>
+      </main>
+    );
+  }
+
+  return (
+    <main>
+      <ItemDetail detail={detail} />
+    </main>
+  );
 };

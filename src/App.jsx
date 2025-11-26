@@ -1,26 +1,51 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 import { Nav } from "./components/Nav/Nav";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { Cart } from "./components/Cart/Cart";
-import { CartProvider } from "./context/CartContext/CartProvider";
+import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
+import { ProductFormContainer } from "./components/ProductFormContainer/ProductFormContainer";
+import { Login } from "./components/Login/Login";
+import { CartProvider } from "./context/CartContext";
+import { AuthProvider } from "./context/AuthContext";
+
+import "./App.css";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <BrowserRouter>
           <Nav />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/category/:category" element={<ItemListContainer />} />
+            <Route path="/detail/:id" element={<ItemDetailContainer />} />
+            <Route path="/login" element={<Login />} />
+
+            <Route
+              path="/cart"
+              element={
+                <ProtectedRoute>
+                  <Cart />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/admin/products"
+              element={
+                <ProtectedRoute>
+                  <ProductFormContainer />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route path="*" element={<h1>Página no encontrada</h1>} />
           </Routes>
-        </CartProvider>
-      </BrowserRouter>
-    </>
+        </BrowserRouter>
+      </CartProvider>
+    </AuthProvider>
   );
 }
 

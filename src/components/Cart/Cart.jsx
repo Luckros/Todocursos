@@ -1,3 +1,6 @@
+import { FaTrash, FaPlus, FaMinus, FaShoppingCart } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { useCartContext } from "../../context/CartContext/useCartContext";
 import { useCartContext } from "../../context/CartContext/useCartContext";
 import { Link } from "react-router-dom";
 

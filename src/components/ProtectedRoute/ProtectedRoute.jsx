@@ -1,10 +1,16 @@
 import { Navigate } from "react-router-dom";
-import { useCartContext } from "../../context/CartContext/useCartContext";
+import { useAuth } from "../../context/AuthContext";
 
 export const ProtectedRoute = ({ children }) => {
-  const { cart } = useCartContext();
-  if (!cart || cart.length === 0) {
-    return <Navigate to="/cart" replace />;
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <main><h2>Cargando autenticación...</h2></main>;
   }
+
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
   return children;
 };
