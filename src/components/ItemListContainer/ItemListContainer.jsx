@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { ItemList } from "../ItemList/ItemList";
 import { API_URL } from "../../config/api";
 import "./ItemListContainer.css";
@@ -103,10 +102,7 @@ export const ItemListContainer = () => {
   return (
     <section className="listContainer container">
       {}
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-      </Helmet>
+
 
       <header className="listHeader">
         <h1 className="listTitle">

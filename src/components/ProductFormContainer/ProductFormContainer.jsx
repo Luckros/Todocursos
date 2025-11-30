@@ -21,7 +21,6 @@ export const ProductFormContainer = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  // cargar lista
   const fetchProducts = () => {
     setLoadingList(true);
     fetch(API_URL)

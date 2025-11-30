@@ -4,12 +4,10 @@ import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HelmetProvider>
       <App />
       <ToastContainer
         position="top-right"
@@ -20,6 +18,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         pauseOnHover
         theme="dark"
       />
-    </HelmetProvider>
   </React.StrictMode>
 );
